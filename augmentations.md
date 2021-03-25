@@ -1,6 +1,6 @@
-## Augmentations
+### Augmentations
 
-### For producing different augmentations of the images, we manipulated the image array and/or used OpenCV functions, with preset attributes. The augmentations applied, along with the preset attributes are:
+#### For producing different augmentations of the images, we manipulated the image array and/or used OpenCV functions, with preset attributes. The augmentations applied, along with the preset attributes are:
 
 1. Horizontal shift: A random ratio is taken in the range (-r,r)
 2. Vertical shift: A random ratio is taken in the range (-r,r)
@@ -20,4 +20,4 @@
 16. Clip: Clips the image array in (mean - 3.5*std, mean + 3.5*std), where mean & std are average & standard deviation of the image array
 #### Note: r is a random number between 0 and 1.
 
-### All the user selected options from the above augmentations, are applied one after the other on the original image with a ___% chance, giving a augmented image with some random augmentations, corresponding to each image from the original dataset. The augmented images are then appended to the array of original images, increasing the difficulty of the dataset. The model is then trained on this combined dataset.
+#### All the user selected options from the above augmentations, are applied one after the other on the original image with a 50% chance, giving a augmented image with some random augmentations, corresponding to each image from the original dataset. The augmented images are then appended to the array of original images, increasing the difficulty of the dataset. The model is then trained on this combined dataset.
