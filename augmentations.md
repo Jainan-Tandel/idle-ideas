@@ -17,7 +17,7 @@
 13. Dialate: The image is dilated with a kernel size of 3x3, with unit values throughout
 14. Erode: The image is eroded with a kernel size of 3x3, with unit values throughout
 15. Morph_Grad: Gives the outline of the image, by finding difference between dilated and eroded image from above two filters
-16. Clip: Clips the image array in (mean - 3.5*std, mean + 3.5*std), where mean & std are average & standard deviation of the image array
+16. Clip: Clips the image array in (mean - 3.5\*std, mean + 3.5\*std), where mean & std are average & standard deviation of the image array
 ##### Note: r is a random number between 0 and 1.
 
-#### All the user selected options from the above augmentations, are applied one after the other on the original image with a 50% chance, giving a augmented image with some random augmentations, corresponding to each image from the original dataset. The augmented images are then appended to the array of original images, increasing the difficulty of the dataset. The model is then trained on this combined dataset.
+#### All the user selected options from the above augmentations, are applied one after the other on the original image, each applied with a 50% chance. Hence, corresponding to each image from the original dataset, we get an augmented image with some random number of augmentations selected from the user list. The augmented images are then appended to the array of original images, increasing the difficulty of the dataset. The model is then trained on this combined dataset.
